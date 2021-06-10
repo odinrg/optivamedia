@@ -25,6 +25,7 @@ class MovieDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //TODO vista sin terminar
         binding = MovieDetailFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -39,6 +40,7 @@ class MovieDetailFragment : Fragment() {
         viewModel.movie.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
+                    //TODO crash cuando llega un redirect en al respuesto en vez del objeto
                     bindCharacter(it.data!!)
                     binding.progressBar.visibility = View.GONE
                     binding.characterCl.visibility = View.VISIBLE

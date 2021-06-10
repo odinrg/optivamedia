@@ -55,7 +55,7 @@ class MoviesFragment : Fragment(), MoviesAdapter.MovieItemListener {
     private fun setupFavBtn(){
         binding.favBtn.setOnClickListener {
             adapter.showFavs()
-            //TODO dejar de mostrar solo favoritos
+            //TODO dejar de mostrar solo favoritos al volver a pulsar el botón
             /*if(){
                 adapter.showFavs()
             }else{
